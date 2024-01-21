@@ -1,0 +1,26 @@
+
+E
+java:S3740‚"/Provide the parametrized type for this generic.(à„Í+
+E
+java:S3740‚"/Provide the parametrized type for this generic.(à„Í+
+\
+java:S1192"FDefine a constant instead of duplicating this literal "Empty" 3 times.(ÛþÎ°
+S
+java:S4977"=Rename "E" which hides a type parameter from the outer scope.(Úü¯‚
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÀžËÃ
+R
+java:S2589<"7Remove this expression which always evaluates to "true"(âûˆºûÿÿÿÿ
+@	java:S106"+Replace this use of System.out by a logger.(ÛþÎ°
+E	java:S106"+Replace this use of System.out by a logger.(žšËñüÿÿÿÿ
+E	java:S106""+Replace this use of System.out by a logger.(ªÓ¼áþÿÿÿÿ
+E	java:S106F"+Replace this use of System.out by a logger.(êÓæøùÿÿÿÿ
+@	java:S106M"+Replace this use of System.out by a logger.(ñ½Å™
+@	java:S106W"+Replace this use of System.out by a logger.(ûíÌ
+@	java:S106^"+Replace this use of System.out by a logger.(ûíÌ
+1
+java:S3626r"Remove this redundant jump.(ûÁÝ…
+@	java:S106q"+Replace this use of System.out by a logger.(Ê ÆÊ
+E	java:S106{"+Replace this use of System.out by a logger.(²ž›Èûÿÿÿÿ
+E	java:S106|"+Replace this use of System.out by a logger.(ôæ™ºÿÿÿÿÿ
+F
+java:S1197€"*Move the array designators [] to the type.(º ìýÿÿÿÿ
