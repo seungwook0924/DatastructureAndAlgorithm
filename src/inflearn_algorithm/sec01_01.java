@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-class Main {
+public class sec01_01 {
     public static int solution(String fullText, char character) {
         String lowerFullText = fullText.toLowerCase();
         char lowerChar = Character.toLowerCase(character);

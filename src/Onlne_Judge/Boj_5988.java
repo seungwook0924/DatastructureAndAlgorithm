@@ -2,7 +2,7 @@ package Onlne_Judge;
 
 import java.util.Scanner;
 
-class Main{
+public class Boj_5988{
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         int N =  sc.nextInt();
