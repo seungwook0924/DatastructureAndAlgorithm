@@ -1,33 +1,37 @@
 package Onlne_Judge;
 
-import java.util.*;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Boj_10986 {
     public static void main(String args[]) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
-
         int N = Integer.parseInt(st.nextToken());
         int M = Integer.parseInt(st.nextToken());
-        long result = 0;
-        long[] S = new long[N + 1];
-        long[] cnt = new long[M];
-
         st = new StringTokenizer(br.readLine());
-        for (int i = 1; i < N + 1; i++) {
-            S[i] = (S[i - 1] + Integer.parseInt(st.nextToken())) % M;
-            if(S[i] == 0) {
-                result++;
-            }
-            cnt[(int) S[i]]++;
+        int[] arr = new int[N];
+        for (int i = 0; i < N; ++i) {
+            arr[i] = Integer.parseInt(st.nextToken());
         }
 
-        for(int i=0; i<M; i++) {
-            if(cnt[i] > 1) {
-                result += (cnt[i]* (cnt[i]-1) / 2);
-            }
+        long count = 0;
+
+        long[] prefixSum = new long[N + 1];
+        long[] remainArr = new long[M];
+        for (int i = 1; i <= N; ++i) {
+            prefixSum[i] = arr[i - 1] + prefixSum[i - 1];
+            int remainder = (int) (prefixSum[i] % M);
+            if(remainder == 0) ++count;
+            ++remainArr[remainder];
         }
-        System.out.println(result);
+
+        for(int i = 0; i < M; ++i){
+            if(remainArr[i] >= 2) count += (remainArr[i] * (remainArr[i] - 1) / 2);
+        }
+
+        System.out.println(count);
     }
 }

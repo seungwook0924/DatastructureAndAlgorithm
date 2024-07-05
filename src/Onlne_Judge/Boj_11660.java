@@ -34,7 +34,7 @@ public class Boj_11660 {
             int x2 = Integer.parseInt(st.nextToken());
             int y2 = Integer.parseInt(st.nextToken());
 
-            int result = prefixSum[x2][y2] - prefixSum[x1 - 1][y2] - prefixSum[x2][y1 - 1] + prefixSum[x1 - 1][y1 - 1];
+            int result = prefixSum[x2][y2] - prefixSum[x2][y1 -1] - prefixSum[x1 - 1][y2] + prefixSum[x1 - 1][y1 - 1];
             sb.append(result).append('\n');
         }
         System.out.print(sb);
