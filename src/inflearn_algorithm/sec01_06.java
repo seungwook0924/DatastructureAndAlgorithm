@@ -6,21 +6,26 @@ import java.io.InputStreamReader;
 import java.util.HashMap;
 
 public class sec01_06 {
-    public static String solution(String str) {
-        StringBuilder sb = new StringBuilder(new String(""));
-        HashMap<Character, Integer> map = new HashMap<>(0);
-        for (char c : str.toCharArray()) {
-            if(map.containsKey(c)){
-                int num = map.get(c);
-                map.put(c, ++num);
-            }
-            else {
-                map.put(c, 1);
-                sb.append(c);
-            }
+//    public static String solution(String str) {
+//        StringBuilder sb = new StringBuilder();
+//        HashMap<Character, Boolean> map = new HashMap<>();
+//        for (char c : str.toCharArray()) {
+//            if (!map.containsKey(c)) {
+//                map.put(c, true);
+//                sb.append(c);
+//            }
+//        }
+//        return sb.toString();
+//    }
+
+    public static String solution(String str){
+        String result = "";
+        for (int i = 0; i < str.length(); ++i) {
+            if(str.indexOf(str.charAt(i)) == i) result += str.charAt(i);
         }
-        return sb.toString();
+        return result;
     }
+
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
