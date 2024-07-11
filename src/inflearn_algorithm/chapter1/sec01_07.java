@@ -1,4 +1,4 @@
-package inflearn_algorithm;
+package inflearn_algorithm.chapter1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
