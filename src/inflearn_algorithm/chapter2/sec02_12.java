@@ -13,25 +13,18 @@ public class sec02_12 {
         int[][] rank = new int[M][N + 1];
 
         // 각 테스트에서 학생들의 순위를 미리 계산
-        for (int k = 0; k < M; ++k) {
-            for (int s = 0; s < N; ++s) {
-                rank[k][arr[k][s]] = s;
-                System.out.print(rank[k][s] + " ");
-            }
-            System.out.println();
+        for (int k = 0; k < M; ++k)
+        {
+            for (int s = 0; s < N; ++s) rank[k][arr[k][s]] = s;
         }
 
         // 학생 쌍 (i, j) 에 대해 비교
         for (int i = 1; i <= N; ++i) {
-            for (int j = 1; j <= N; ++j) {
+            for (int j = 1; j <= N; ++j)
+            {
                 int temp = 0;
-                for (int k = 0; k < M; ++k) {
-                    if (rank[k][i] < rank[k][j]) ++temp;
-                }
-                if (temp == M) {
-                    ++count;
-                    System.out.println(i + " " + j);
-                }
+                for (int k = 0; k < M; ++k) if (rank[k][i] < rank[k][j]) ++temp;
+                if (temp == M) ++count;
             }
         }
 
@@ -44,7 +37,9 @@ public class sec02_12 {
         int N = Integer.parseInt(st.nextToken());
         int M = Integer.parseInt(st.nextToken());
         int[][] arr = new int[M][N];
-        for(int i = 0; i < M; ++i){
+
+        for(int i = 0; i < M; ++i)
+        {
             st = new StringTokenizer(br.readLine());
             for(int j = 0; j < N; ++j) arr[i][j] = Integer.parseInt(st.nextToken());
         }
