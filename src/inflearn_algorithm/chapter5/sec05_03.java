@@ -11,33 +11,23 @@ public class sec05_03 {
     {
         int count = 0;
         Stack<Integer> stack = new Stack<>();
-        for(int i = 0; i < moves.length; ++i)
+        for(int i : moves)
         {
             for(int j = 0; j < board.length; ++j) //y축
             {
-                if(stack.empty())
+                if(board[j][i - 1] != 0)
                 {
-                    if(board[j][moves[i] - 1] != 0) {
-                        stack.push(board[j][moves[i] - 1]);
-                        board[j][moves[i] - 1] = 0;
-                        break;
+                    if((!stack.isEmpty()) && (stack.peek() == (board[j][i - 1])))
+                    {
+                        stack.pop();
+                        count += 2;
                     }
-                    continue;
-                }
-                int temp = stack.peek();
-                if((board[j][moves[i] - 1] != 0) && (temp == (board[j][moves[i] - 1])))
-                {
-                    stack.pop();
-                    count += 2;
-                    board[j][moves[i] - 1] = 0;
-                }
-                else if(board[j][moves[i] - 1] != 0)
-                {
-                    stack.push(board[j][moves[i] - 1]);
-                    board[j][moves[i] - 1] = 0;
+                    else stack.push(board[j][i - 1]);
+
+                    board[j][i - 1] = 0;
+                    break;
                 }
             }
-            System.out.print(stack.peek());
         }
 
         return count;
