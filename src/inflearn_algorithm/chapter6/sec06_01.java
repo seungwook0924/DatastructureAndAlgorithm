@@ -1,22 +1,28 @@
-package inflearn_algorithm.Chapter6;
+package inflearn_algorithm.chapter6;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class sec06_03 {
+//선택 정렬
+public class sec06_01 {
     public static int[] solution(int[] arr) {
-        for(int i = 1; i < arr.length; ++i)
+        for(int i = 0; i < arr.length - 1; ++i)
         {
-            int targetValue = arr[i];
-            int j = i - 1;
-            for(; j >= 0; --j)
+            int min = arr[i];
+            int minIdx = i;
+            for(int j = i + 1; j <arr.length; ++j)
             {
-                if(arr[j] > targetValue) arr[j + 1] = arr[j];
-                else break;
+                if(arr[j] < min)
+                {
+                    min = arr[j];
+                    minIdx = j;
+                }
             }
-            arr[j + 1] = targetValue;
+            int tmp = arr[i];
+            arr[i] = min;
+            arr[minIdx] = tmp;
         }
         return arr;
     }
@@ -27,6 +33,6 @@ public class sec06_03 {
         StringTokenizer st = new StringTokenizer(br.readLine());
         int[] arr = new int[N];
         for (int i = 0; i < N; ++i) arr[i] = Integer.parseInt(st.nextToken());
-        for (int i : solution(arr)) System.out.print(i + " ");
+        for(int i : solution(arr)) System.out.print(i + " ");
     }
 }

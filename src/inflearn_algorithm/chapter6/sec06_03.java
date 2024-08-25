@@ -1,24 +1,22 @@
-package inflearn_algorithm.Chapter6;
+package inflearn_algorithm.chapter6;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-//버블 정렬
-public class sec06_02 {
+public class sec06_03 {
     public static int[] solution(int[] arr) {
-        for(int i = 0; i < arr.length - 1; ++i)
+        for(int i = 1; i < arr.length; ++i)
         {
-            for(int j = 0; j < arr.length - 1 - i; ++j)
+            int targetValue = arr[i];
+            int j = i - 1;
+            for(; j >= 0; --j)
             {
-                if(arr[j] > arr[j + 1])
-                {
-                    int tmp = arr[j + 1];
-                    arr[j + 1] = arr[j];
-                    arr[j] = tmp;
-                }
+                if(arr[j] > targetValue) arr[j + 1] = arr[j];
+                else break;
             }
+            arr[j + 1] = targetValue;
         }
         return arr;
     }
@@ -29,8 +27,6 @@ public class sec06_02 {
         StringTokenizer st = new StringTokenizer(br.readLine());
         int[] arr = new int[N];
         for (int i = 0; i < N; ++i) arr[i] = Integer.parseInt(st.nextToken());
-        for (int i : solution(arr)) {
-            System.out.print( i + " ");
-        }
+        for (int i : solution(arr)) System.out.print(i + " ");
     }
 }
