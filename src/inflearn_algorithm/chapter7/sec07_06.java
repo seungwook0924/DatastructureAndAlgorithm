@@ -15,7 +15,8 @@ public class sec07_06 {
             for(int i = 1; i <= N; ++i) if(ch[i]==1) sb.append(i).append(" ");
             if(!sb.isEmpty()) System.out.println(sb);
         }
-        else{
+        else
+        {
             ch[L] = 1;
             solution(L + 1);
             ch[L] = 0;
