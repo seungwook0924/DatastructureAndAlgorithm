@@ -1,9 +1,11 @@
+package Onlne_Judge.bronze;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class test
+public class Boj_23881
 {
     public static void main(String[] args) throws IOException
     {
@@ -20,17 +22,21 @@ public class test
         int count = 0;
         for(int i = N - 1; i > 0; --i)
         {
-            for(int j = i - 1; j >= 0; --j)
+            int maxIndex = i;
+            for(int j = i - 1; j >= 0; --j) if(arr[j] > arr[maxIndex]) maxIndex = j;
+            if(maxIndex != i)
             {
-                if(arr[j] > arr[i])
+                int temp = arr[i];
+                arr[i] = arr[maxIndex];
+                arr[maxIndex] = temp;
+                ++count;
+                if(count == K)
                 {
-                    int temp = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = temp;
-                    if(++count == K) System.out.println(arr[j] + " " + arr[i]);
+                    System.out.println(arr[maxIndex] + " " + arr[i]);
+                    return;
                 }
             }
         }
-        if(count < K) System.out.println(-1);
+        System.out.println(-1);
     }
 }
