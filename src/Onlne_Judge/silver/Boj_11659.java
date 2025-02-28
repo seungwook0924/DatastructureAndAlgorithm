@@ -1,4 +1,4 @@
-package Onlne_Judge;
+package Onlne_Judge.silver;
 
 import java.io.BufferedReader;
 import java.io.IOException;
