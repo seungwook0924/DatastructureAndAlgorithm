@@ -10,6 +10,11 @@ public class Boj_23802
     {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
+        func(N);
+    }
+
+    static void func(int N)
+    {
         for(int i = 0; i < N * 5; ++i)
         {
             if(i >= N)
@@ -23,6 +28,5 @@ public class Boj_23802
                 System.out.println();
             }
         }
-
     }
 }

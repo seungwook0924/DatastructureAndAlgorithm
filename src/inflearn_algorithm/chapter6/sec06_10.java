@@ -1,8 +1,8 @@
-package inflearn_algorithm;
+package inflearn_algorithm.chapter6;
 
 import java.io.IOException;
 
-public class template
+public class sec06_10
 {
     public static void solution()
     {
