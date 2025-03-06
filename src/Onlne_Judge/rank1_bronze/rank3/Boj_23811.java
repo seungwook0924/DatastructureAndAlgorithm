@@ -1,9 +1,8 @@
-package Onlne_Judge.bronze;
+package Onlne_Judge.rank1_bronze.rank3;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.StringTokenizer;
 
 public class Boj_23811
 {

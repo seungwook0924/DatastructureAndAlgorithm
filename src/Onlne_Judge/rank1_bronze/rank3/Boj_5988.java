@@ -1,4 +1,4 @@
-package Onlne_Judge.bronze;
+package Onlne_Judge.rank1_bronze.rank3;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package Onlne_Judge.bronze;
+package Onlne_Judge.rank1_bronze.rank1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
