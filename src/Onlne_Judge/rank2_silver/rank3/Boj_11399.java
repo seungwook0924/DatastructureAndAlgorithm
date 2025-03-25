@@ -17,7 +17,7 @@ public class Boj_11399
 
         for (int i = 0; i < n; ++i) arr[i] = Integer.parseInt(st.nextToken());
 
-        // 선택 정렬
+        // 삽입 정렬
         for(int i = 1; i < arr.length; ++i)
         {
             int tmp = arr[i];
