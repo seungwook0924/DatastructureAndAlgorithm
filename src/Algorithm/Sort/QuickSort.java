@@ -12,8 +12,8 @@ public class QuickSort
 
         while (leftPtr <= rightPtr)
         {
-            while (leftPtr <= rightPtr && arr[leftPtr] <= pivot) leftPtr++; // 왼쪽에서 pivot보다 큰 값을 찾는다
-            while (leftPtr <= rightPtr && arr[rightPtr] >= pivot) rightPtr--; // 오른쪽에서 pivot보다 작은 값을 찾는다
+            while (leftPtr <= rightPtr && arr[leftPtr] <= pivot) ++leftPtr; // 왼쪽에서 pivot보다 큰 값을 찾는다
+            while (leftPtr <= rightPtr && arr[rightPtr] >= pivot) --rightPtr; // 오른쪽에서 pivot보다 작은 값을 찾는다
             if (leftPtr < rightPtr) swap(arr, leftPtr, rightPtr); // 조건을 만족하면 swap
         }
 
