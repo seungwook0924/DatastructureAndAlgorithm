@@ -46,7 +46,6 @@ public class Boj_11724
 
     static void DFS(int v)
     {
-        if(visited[v]) return;
         visited[v] = true;
         for(int i : adjacencyList[v]) if(!visited[i]) DFS(i);
     }

@@ -48,14 +48,12 @@ public class Boj_13023
 
     static boolean DFS(int num, int depth)
     {
-        System.out.print(num + "(depth " + depth +") -> ");
         if(depth == 5) return true; // 깊이가 5라면 메서드 종료 및 true 리턴
         visited[num] = true; // 방문 처리
         for(int i : adjacencyList[num]) // 해당 인접 리스트 순회
         {
             if((!visited[i]) && (DFS(i, depth + 1))) return true; // 재귀의 리턴 값이 ture 라면 true 리턴
         }
-        System.out.println();
         // 메서드가 종료되지 않았다면(true를 리턴받지 못했다면)
         visited[num] = false; // 방문 처리 취소(다른 경로에서 num을 방문할 수 있도록)
         return false;
