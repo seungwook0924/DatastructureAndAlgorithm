@@ -1,4 +1,4 @@
-package Algorithm.String_Search;
+package Algorithm.Search.StringSearch;
 
 public class BruteForce
 {
