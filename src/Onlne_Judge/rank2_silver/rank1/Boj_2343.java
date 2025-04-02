@@ -34,6 +34,7 @@ public class Boj_2343
         System.out.println(binarySearch(left,right));
 
     }
+
     public static long binarySearch(long leftPtr, long rightPtr)
     {
         while(leftPtr <= rightPtr)
@@ -51,7 +52,6 @@ public class Boj_2343
                     ++count; // 블루레이 개수 증가
                 }
             }
-
             if(count <= M) rightPtr = mid - 1; //필요한 블루레이 갯수가 M보다 작거나 같으면
             else leftPtr = mid + 1; //총 필요한 블루레이 개수가 M보다 크다면
         }
