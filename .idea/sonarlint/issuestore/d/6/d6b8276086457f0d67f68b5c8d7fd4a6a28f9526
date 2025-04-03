@@ -1,35 +1,0 @@
-
-D
-java:S3740:"/Provide the parametrized type for this generic.(š¼
-D
-java:S3740O"/Provide the parametrized type for this generic.(š¼
-D
-java:S3740b"/Provide the parametrized type for this generic.(š¼
-F
-java:S3740¿"/Provide the parametrized type for this generic.(ãƒ½‘
-S
-java:S4977"=Rename "E" which hides a type parameter from the outer scope.(Úü¯‚
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÀËÃ
-E	java:S106!"+Replace this use of System.out by a logger.(šËñüÿÿÿÿ
-E	java:S106$"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ
-=
-java:S1125*"'Remove the unnecessary boolean literal.(Ï•ï¹
-E	java:S1060"+Replace this use of System.out by a logger.(šËñüÿÿÿÿ
-E	java:S1063"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ
-B
-java:S1125L"'Remove the unnecessary boolean literal.(ƒê”»ùÿÿÿÿ
-m
-java:S3776`"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(¸˜İôüÿÿÿÿ
-E	java:S106r"+Replace this use of System.out by a logger.(êÓæøùÿÿÿÿ
-@	java:S106y"+Replace this use of System.out by a logger.(ñ½Å™
-A	java:S106‡"+Replace this use of System.out by a logger.(ûíÌ
-C
-java:S1125ˆ"'Remove the unnecessary boolean literal.(ÌØğ¸øÿÿÿÿ
-A	java:S106™"+Replace this use of System.out by a logger.(ûíÌ
-2
-java:S3626¯"Remove this redundant jump.(ûÁİ…
-A	java:S106®"+Replace this use of System.out by a logger.(Ê ÆÊ
-F	java:S106¸"+Replace this use of System.out by a logger.(²›Èûÿÿÿÿ
-F	java:S106¹"+Replace this use of System.out by a logger.(ôæ™ºÿÿÿÿÿ
-F
-java:S1197½"*Move the array designators [] to the type.(º ìıÿÿÿÿ
