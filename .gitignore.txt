@@ -1,5 +1,0 @@
-/out/
-*.imi
-.idea/
-*.iws
-.DS_Store
