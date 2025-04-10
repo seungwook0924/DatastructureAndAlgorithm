@@ -22,7 +22,7 @@ public class Boj_1456
         isPrime[0] = isPrime[1] = false;
 
         // 에라토스테네스의 체
-        for(int i = 2; i * i < max; i++)
+        for(int i = 2; i * i < max; ++i)
             if(isPrime[i])
                 for(int j = i * i; j < max; j += i)
                     isPrime[j] = false;
