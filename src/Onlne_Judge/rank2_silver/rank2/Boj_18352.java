@@ -7,8 +7,8 @@ import java.util.*;
 
 public class Boj_18352
 {
-    static ArrayList<Integer>[] list;
-    static int distanceArr[];
+    static ArrayList<Integer>[] list; // 인접 리스트
+    static int distanceArr[]; // 거리를 저장하는 배열
 
     public static void main(String[] args) throws IOException
     {
@@ -31,11 +31,13 @@ public class Boj_18352
             st = new StringTokenizer(br.readLine());
             int from = Integer.parseInt(st.nextToken());
             int to = Integer.parseInt(st.nextToken());
-            list[from].add(to);
+            list[from].add(to); // from에서 to로 가는 경로 추가
         }
 
-        bfs(x);
+        bfs(x); // BFS 수행
 
+
+        // 거리가 k인 도시 출력
         boolean found = false;
         for (int i = 1; i < n + 1; ++i)
         {
