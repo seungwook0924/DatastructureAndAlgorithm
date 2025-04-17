@@ -16,7 +16,7 @@ public class problem2
         int[] arr = new int[n];
         for(int i = 0; i < n; ++i) arr[i] = Integer.parseInt(st.nextToken());
 
-        int sum = (2 * arr.length) + arr[0] + arr[arr.length - 1]; // 하단 너비 + 상단 너비 + 좌측 너비 + 우측 너비
+        int sum = (2 * arr.length) + arr[0] + arr[arr.length - 1]; // (울타리 총 너비 * 2) + 좌측 울타리 높이 + 우측 울타리 높이
 
         // 울타리 사이 너비
         for(int i = 1; i < n; ++i)
