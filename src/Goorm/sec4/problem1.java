@@ -18,13 +18,13 @@ public class problem1
             StringTokenizer st = new StringTokenizer(br.readLine());
 
             int a = Integer.parseInt(st.nextToken());
-            String operation = st.nextToken();
+            String operator = st.nextToken();
             int b = Integer.parseInt(st.nextToken());
 
-            if(operation.equals("+")) sum += a + b;
-            else if(operation.equals("-")) sum += a - b;
-            else if(operation.equals("/")) sum += a / b;
-            else if(operation.equals("*")) sum += a * b;
+            if(operator.equals("+")) sum += a + b;
+            else if(operator.equals("-")) sum += a - b;
+            else if(operator.equals("/")) sum += a / b;
+            else if(operator.equals("*")) sum += a * b;
         }
         System.out.print(sum);
     }
