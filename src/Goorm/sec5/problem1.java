@@ -27,8 +27,6 @@ public class problem1
         int answer = 0;
         for(int i = 0; i < d.length; ++i)
         {
-            for(int j = 0; j < h.length; ++j) System.out.print(h[j] + " ");
-            System.out.println("location = " + location);
             if(h[location] >= m)
             {
                 answer += h[location];
@@ -41,33 +39,8 @@ public class problem1
             for(int j = 0; j < h.length; ++j) ++h[j];
         }
 
-        System.out.print(answer);
-    }
-
-
-//    public static void main(String[] args) throws IOException
-//    {
-//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-//        StringTokenizer st = new StringTokenizer(br.readLine());
-//
-//        int n = Integer.parseInt(st.nextToken());
-//        int m = Integer.parseInt(st.nextToken());
-//        int location = Integer.parseInt(st.nextToken()) - 1;
-//
-//        int[] h = new int[n];
-//        st = new StringTokenizer(br.readLine());
-//        for(int i = 0; i < n; ++i) h[i] = Integer.parseInt(st.nextToken());
-//
-//        int q = Integer.parseInt(br.readLine());
-//        String[] d = new String[q];
-//        st = new StringTokenizer(br.readLine());
-//        for(int i = 0; i < q; ++i) d[i] = st.nextToken();
-//
-//        long answer = 0;
 //        for(int i = 0; i < q; ++i)
 //        {
-//            for(int j = 0; j < h.length; ++j) System.out.print(h[j] + i + " ");
-//            System.out.println("location = " + location);
 //            if(h[location] + i >= m)
 //            {
 //                answer += h[location] + i;
@@ -77,7 +50,7 @@ public class problem1
 //            if(d[i].equals("L")) location = (location - 1 + n) % n;
 //            else if(d[i].equals("R")) location = (location + 1) % n;
 //        }
-//
-//        System.out.print("정답: " + answer);
-//    }
+
+        System.out.print(answer);
+    }
 }

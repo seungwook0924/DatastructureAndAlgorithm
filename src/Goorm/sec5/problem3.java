@@ -3,31 +3,44 @@ package Goorm.sec5;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.LinkedList;
-import java.util.Queue;
 import java.util.StringTokenizer;
 
 public class problem3 {
-    public static void main(String[] args) throws IOException
-    {
+    static int N;
+    static int[] hp = new int[100000];
+
+    public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st;
 
-        int n = Integer.parseInt(br.readLine());
-        int[] hp = new int[n];
-        StringTokenizer st = new StringTokenizer(br.readLine());
-        for (int i = 0; i < n; ++i) hp[i] = Integer.parseInt(st.nextToken());
+        N = Integer.parseInt(br.readLine());
 
+        st = new StringTokenizer(br.readLine());
+        for (int i = 0; i < N; i++) hp[i] = Integer.parseInt(st.nextToken());
+
+        long answer = 0;
         int attackCount = 0;
-        for (int i = 0; i < n; ++i)
+
+        for (int i = 0; i < N; ++i)
         {
             while (hp[i] > 0)
             {
-                attackCount++;
-                int damage = (attackCount - 1) % 4 + 1;
-                hp[i] -= damage;
+                // 공격 횟수가 0 그리고 체력이 10 이상이라면
+                if ((attackCount == 0) && (hp[i] >= 10))
+                {
+                    int cycle = hp[i] / 10;
+                    hp[i] -= cycle * 10;
+                    answer += cycle * 4;
+                }
+                else // 공격횟수가 0이 아니거나 체력이 10 미만일 때
+                {
+                    hp[i] -= attackCount + 1;
+                    attackCount = (attackCount + 1) % 4;
+                    ++answer;
+                }
             }
         }
 
-        System.out.println(attackCount);
+        System.out.print(answer);
     }
 }
