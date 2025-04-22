@@ -3,7 +3,7 @@ package Goorm.sec6;
 import java.io.*;
 import java.util.Arrays;
 
-public class problem2
+public class Problem2
 {
 
     public static boolean[] sieve(int n)
@@ -13,7 +13,7 @@ public class problem2
         isPrime[0] = false;
         isPrime[1] = false;
 
-        for (int i = 2; i * i <= n; i++)
+        for (int i = 2; i * i <= n; ++i)
         {
             if (isPrime[i])
                 for (int j = i * i; j <= n; j += i)

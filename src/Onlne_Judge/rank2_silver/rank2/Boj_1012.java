@@ -38,12 +38,8 @@ public class Boj_1012
             }
 
             for(int y = 0; y < n; ++y)
-            {
                 for(int x = 0; x < m; ++x)
-                {
                     if(bfs(y, x)) ++count; // bfs 탐색 시작
-                }
-            }
 
             System.out.println(count); // 결과 출력
         }

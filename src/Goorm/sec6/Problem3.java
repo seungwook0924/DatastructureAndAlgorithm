@@ -3,7 +3,7 @@ package Goorm.sec6;
 import java.io.*;
 import java.util.*;
 
-public class problem3 {
+public class Problem3 {
     static int N;
     static String[][] board;
     static Map<String, int[]> directionMap = new HashMap<>();

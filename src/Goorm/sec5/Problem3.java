@@ -3,7 +3,7 @@ package Goorm.sec5;
 import java.io.*;
 import java.util.*;
 
-public class problem3 {
+public class Problem3 {
     static int N;
     static int[] hp = new int[100000];
 

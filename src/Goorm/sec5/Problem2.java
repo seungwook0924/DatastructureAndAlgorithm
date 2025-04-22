@@ -7,7 +7,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.StringTokenizer;
 
-public class problem2
+public class Problem2
 {
     public static void main(String[] args) throws IOException
     {
