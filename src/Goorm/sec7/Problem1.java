@@ -37,8 +37,8 @@ public class Problem1 {
         });
 
         int[] answer = new int[n];
-        for (int i = 0; i < n; i++) answer[islands[i].index] = n - i - 1; // 자신보다 뒤에 있는 섬들의 개수를 저장
-        for (int i = 0; i < n; i++) System.out.println(answer[i]);
+        for (int i = 0; i < n; ++i) answer[islands[i].index] = n - i - 1; // 자신보다 뒤에 있는 섬들의 개수를 저장
+        for (int i = 0; i < n; ++i) System.out.println(answer[i]);
 
     }
 }

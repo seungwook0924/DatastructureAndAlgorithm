@@ -36,7 +36,7 @@ public class Boj_2178
 
     static void BFS(int startX, int startY)
     {
-        int[] dy = { -1, 1, 0, 0 }; // y축(상, 하)
+        int[] dy = { 1, -1, 0, 0 }; // y축(상, 하)
         int[] dx = { 0, 0, -1, 1 }; // x축(좌, 우)
         Queue<int[]> que = new LinkedList<>();
         que.offer(new int[] {startY, startX}); // 큐에 시작 좌표를 넣음

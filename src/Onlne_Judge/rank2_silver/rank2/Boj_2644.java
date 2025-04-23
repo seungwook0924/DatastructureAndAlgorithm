@@ -5,9 +5,9 @@ import java.util.*;
 
 public class Boj_2644
 {
-    static ArrayList<Integer>[] list;
-    static boolean[] visited;
-    static int[] depth;
+    static ArrayList<Integer>[] list; // 인접 리스트
+    static boolean[] visited; // 방문 배열
+    static int[] depth; // 깊이(촌수) 배열
 
     public static void main(String[] args) throws Exception
     {
@@ -29,8 +29,8 @@ public class Boj_2644
             st = new StringTokenizer(br.readLine());
             int parent = Integer.parseInt(st.nextToken());
             int child = Integer.parseInt(st.nextToken());
-            list[parent].add(child);
-            list[child].add(parent);
+            list[parent].add(child); // 양방향
+            list[child].add(parent); // 양방향
         }
 
         System.out.print(bfs(start, target));
@@ -51,8 +51,8 @@ public class Boj_2644
             {
                 if(!visited[next])
                 {
-                    visited[next] = true;
-                    depth[next] = depth[now] + 1;
+                    visited[next] = true; // 방문 표시
+                    depth[next] = depth[now] + 1; // 깊이(촌수) 업데이트
                     que.offer(next);
                 }
             }
