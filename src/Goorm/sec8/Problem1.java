@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Problem1_1
+public class Problem1
 {
     static long answer = Long.MAX_VALUE; // 최댓값으로 초기화
     static int[] numbers; // 사용할 수 있는 숫자 배열
@@ -20,11 +20,11 @@ public class Problem1_1
 
         long k = Long.parseLong(br.readLine());
 
-        func(0, k);
+        func(0, k, 1);
         System.out.print(answer);
     }
 
-    static void func(long nowNumber, long k)
+    static void func(long nowNumber, long k, int depth)
     {
         if (nowNumber > k) // 현재 숫자가 K보다 크다면
         {
@@ -35,8 +35,9 @@ public class Problem1_1
         for (int i = 0; i < numbers.length; ++i)
         {
             long nextNumber = nowNumber * 10 + numbers[i];
+            System.out.println("[depth : " + depth + "] nextNumber : " + nowNumber + " * 10 + " + numbers[i] + " = " + nextNumber);
             if (nextNumber == 0) continue; // 다음 숫자가 0이 되는 경우 pass
-            func(nextNumber, k);
+            func(nextNumber, k, depth + 1);
         }
     }
 }
