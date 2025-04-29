@@ -27,14 +27,14 @@ public class Problem4
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
         int n = Integer.parseInt(br.readLine());
-        int[] inputs = new int[n];
+        int[] armors = new int[n];
         int max = 0;
 
-        // 입력값 저장 및 최대값 계산
+        // 갑옷 고유값 저장 및 최대값 계산
         for(int i = 0; i < n; ++i)
         {
-            inputs[i] = Integer.parseInt(br.readLine());
-            if (inputs[i] > max) max = inputs[i];
+            armors[i] = Integer.parseInt(br.readLine());
+            if (armors[i] > max) max = armors[i];
         }
 
         boolean[] isPrime = sieve(max);
@@ -42,7 +42,7 @@ public class Problem4
         for (int i = 0; i < n; i++)
         {
             int count = 0;
-            while (!isPrime[inputs[i] - count]) count++; // 소수가 아닐 때마다 갑옷 변형 시스템을 1회 사용
+            while (!isPrime[armors[i] - count]) ++count; // 가장 처음 만나는 소수 -> 가장 적은 갑옷 변형 시스템 사용 횟수
             sb.append(count).append(System.lineSeparator());
         }
         System.out.println(sb);
