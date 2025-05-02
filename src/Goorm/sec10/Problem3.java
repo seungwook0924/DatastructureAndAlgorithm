@@ -14,13 +14,7 @@ public class Problem3
         long n = Long.parseLong(st.nextToken()); // 게임 진행 횟수
         long m = Long.parseLong(st.nextToken()); // 승리 횟수
 
-        long rate = m * 100 / n;
-
-        if (rate >= 99)
-        {
-            System.out.println("X");
-            return;
-        }
+        long rate = m * 100 / n; // 현재 승률 계산
 
         long leftPtr = 1;
         long rightPtr = (long) Math.pow(10, 12);
