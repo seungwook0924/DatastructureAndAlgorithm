@@ -1,4 +1,4 @@
-package Algorithm.Search.StringSearch;
+package Algorithm.Search.String_Search;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

@@ -1,4 +1,4 @@
-package Algorithm.Search.StringSearch;
+package Algorithm.Search.String_Search;
 
 public class BoyerMoore
 {
