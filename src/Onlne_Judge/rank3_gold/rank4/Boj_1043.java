@@ -26,10 +26,10 @@ public class Boj_1043
         for (int i = 1; i < n + 1; ++i) parent[i] = i;
 
         st = new StringTokenizer(br.readLine());
-        int truthCount = Integer.parseInt(st.nextToken());
+        int truthCount = Integer.parseInt(st.nextToken()); // 진실을 아는 사람의 수
         for (int i = 0; i < truthCount; ++i)
         {
-            int person = Integer.parseInt(st.nextToken());
+            int person = Integer.parseInt(st.nextToken()); // 진실을 아는 사람의 번호
             knowsTruth[person] = true;
         }
 
@@ -62,18 +62,20 @@ public class Boj_1043
         System.out.println(result);
     }
 
-    static int find(int node)
-    {
-        if (parent[node] == node) return node;
-        return parent[node] = find(parent[node]);
-    }
-
     static void union(int a, int b)
     {
         int parentA = find(a);
         int parentB = find(b);
         if (parentA == parentB) return;
 
-        parent[parentB] = parentA;
+        // 부모가 다르다면, 두 부모 노드 중 값이 더 작은 노드가 부모 노드가 됨
+        if (parentA < parentB) parent[parentB] = parentA;
+        else parent[parentA] = parentB;
+    }
+
+    static int find(int node)
+    {
+        if (parent[node] == node) return node;
+        return parent[node] = find(parent[node]);
     }
 }
