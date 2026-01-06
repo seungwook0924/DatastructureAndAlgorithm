@@ -18,34 +18,11 @@ out/
 *.ear
 hs_err_pid*
 
-# Gradle 빌드 파일 제외
-.gradle/
-build/
-!gradle-wrapper.jar
-
-# Kotlin 빌드 파일 제외
-*.kotlin_module
-
-# Maven 빌드 파일 제외
-target/
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionsBackup
-pom.xml.next
-release.properties
-
-# log 파일 제외
-*.log
-
 # Temporary files
 *.swp
 *.swo
 *~
 Thumbs.db
 
-# 실행 파일 및 바이너리 파일 제외
-*.exe
-*.out
-*.o
-
+# 추적하지 않을 디렉터리
 src/practice/
